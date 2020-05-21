@@ -1,22 +1,12 @@
 import {ChatHandler} from "../types";
 import {arrayRandom, stringMatchesAny} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
+import {isMessageTargetingSnaily} from "../lib/targeting";
 
 export const TAUNT: ChatHandler =
   async (message) => {
-    let isTargeted = false;
-    const str = message.content.toLowerCase();
-
-    for (let [_, user] of message.mentions.users) {
-      if (user.id === message.client.user?.id) {
-        isTargeted = true;
-        break;
-      }
-    }
-
-    if (!isTargeted && str.match(/snaily/)) {
-      isTargeted = true
-    }
+    const str = message.content.toLowerCase()
+    let isTargeted = isMessageTargetingSnaily(message, false);
 
     // ANY
     const taunts = [
@@ -25,8 +15,9 @@ export const TAUNT: ChatHandler =
       /i (hate|kill) (u|you)/,
       /(noob|pleb)/,
       /(you|u) (cant|can't|cannot)/,
-      /snaily?.+(ugly|rude|stupid|dumb?|lame)/,
+      /(ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
       /(terrible|bad) support/,
+      /stfu/,
     ]
 
     const replies = [
@@ -34,6 +25,7 @@ export const TAUNT: ChatHandler =
       "I WILL FUCKIN BAN U",
       "YOU DARE QUESTION YOUR GOD?",
       "STFU",
+      "_\\*bitchslaps u\\*_"
     ]
 
     if (message.channel && isTargeted && stringMatchesAny(str, taunts)) {

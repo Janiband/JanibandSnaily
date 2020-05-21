@@ -5,7 +5,13 @@ import {snailyTypeMessage} from "../lib/anxiety";
 export const UNBAN: ChatHandler =
   async (message) => {
     const str = message.content.toLowerCase()
-    const matches = [/unban/, /unben/, /debanano/, /deban/, /(plz|pls|plis|please)/]
+    const matches = [
+      /unban/, /unben/,
+      /debanano/, /deban/, /desp?ban/,
+      /(plz|pls|plis|please)/,
+      /^no+w*[1!]*$/
+    ]
+
     const replies = [
       "REKT",
       "NOT TODAY NOOB",
@@ -13,7 +19,10 @@ export const UNBAN: ChatHandler =
       "YOUR REQUEST HAS BEEN DENIED",
       "PERMBANNED",
       "No.",
-      "No, heathen."
+      "No, heathen.",
+      "Did you cheat on our blessed platform?",
+      "Are you lying?",
+      "says right here ur a liar",
     ]
 
     if (message.channel && stringMatchesAny(str, matches)) {

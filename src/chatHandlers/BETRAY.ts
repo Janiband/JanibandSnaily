@@ -5,7 +5,7 @@ import {snailyTypeMessage} from "../lib/anxiety";
 export const BETRAY: ChatHandler =
   async (message) => {
     const msg = message.content.toLowerCase()
-    const matches = [/betray(ed|ing)/, /(you )?snaily/];
+    const matches = [/(insult|betray)(s|ed|ing)?/, /(you )?snaily?/];
 
     const betrayMessages = [
       "WHAT THE FUCK",
