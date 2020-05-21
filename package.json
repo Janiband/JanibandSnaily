@@ -1,0 +1,21 @@
+{
+  "name": "janiband-snaily",
+  "author": {
+    "name": "Evan Darwin",
+    "email": "github@relta.net"
+  },
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node -r ts-node/register ./src/index.ts"
+  },
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.4",
+    "@types/typescript": "^2.0.0",
+    "ts-node": "^8.10.1"
+  }
+}
