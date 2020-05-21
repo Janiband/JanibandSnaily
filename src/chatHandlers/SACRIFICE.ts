@@ -7,11 +7,14 @@ export const SACRIFICE: ChatHandler =
     const msg = message.content.toLowerCase()
     const matches = [
       /(sacrifice[sd]?)/,
+      /throws?.+in(to)?/,
     ]
     const replies = [
       "SNAILY ACCEPTS YOUR OFFERING",
       "I REQUIRE ANOTHER SOUL",
-      "GOOD, YOU HAVE PLEASED YOUR GOD"
+      "GOOD, YOU HAVE PLEASED YOUR GOD",
+      "A debt has been paid",
+      "You are absolved of your sins",
     ]
 
     if (message.channel && stringMatchesAny(msg, matches)) {

@@ -29,7 +29,7 @@ export const TAUNT: ChatHandler =
       "_\\*bitchslaps u\\*_"
     ]
 
-    if (message.channel && isTargeted && stringMatchesAny(str, taunts)) {
+    if (message.channel && stringMatchesAny(str, taunts)) {
       await snailyTypeMessage(message.channel, arrayRandom(replies));
       return true;
     }
