@@ -6,7 +6,7 @@ export const RETORT: ChatHandler =
   async (message) => {
     const msg = message.content.toLowerCase()
     const triggers = [
-      /^no+[1!]*/,
+      /^no+[1!]*$/,
       /no* (lie|lying|fib)/,
       /unfair b[ae]n/,
     ]

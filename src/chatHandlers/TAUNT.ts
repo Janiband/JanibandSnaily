@@ -10,6 +10,7 @@ export const TAUNT: ChatHandler =
 
     // ANY
     const taunts = [
+      /(bitch)?(kills|slaps)/,
       /(shoot|fart|laugh)s? at/,
       /(screw|fuc?k|no) (u|you)/,
       /i (hate|kill) (u|you)/,
@@ -25,11 +26,13 @@ export const TAUNT: ChatHandler =
       "FUCK U",
       "I WILL FUCKIN BAN U",
       "YOU DARE QUESTION YOUR GOD?",
+      "Call ur mom rn because it's the last time she will hear your voice",
+      "I hope you have a will",
       "STFU",
       "_\\*bitchslaps u\\*_"
     ]
 
-    if (message.channel && stringMatchesAny(str, taunts)) {
+    if (message.channel && message.author.id !== message.client.user?.id && stringMatchesAny(str, taunts)) {
       await snailyTypeMessage(message.channel, arrayRandom(replies));
       return true;
     }

@@ -6,12 +6,14 @@ export const UNBAN: ChatHandler =
   async (message) => {
     const str = message.content.toLowerCase()
     const matches = [
-      /unban/, /unben/,
+      /un-?b[ea]n/,
       /debanano/, /deban/, /desp?ban/,
       /(plz|pls|plis|pliz+|please).+(h[ea]lp)/,
       /^no+w*[1!]*$/,
       /\snao/,
-      /^why+/
+      /^why+/,
+      /banned (for|by) hac?k/,
+      /b[ae]n.+no rea[zs]on/,
     ]
 
     const replies = [
