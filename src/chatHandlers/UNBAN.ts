@@ -8,8 +8,10 @@ export const UNBAN: ChatHandler =
     const matches = [
       /unban/, /unben/,
       /debanano/, /deban/, /desp?ban/,
-      /(plz|pls|plis|please)/,
-      /^no+w*[1!]*$/
+      /(plz|pls|plis|pliz+|please).+(h[ea]lp)/,
+      /^no+w*[1!]*$/,
+      /\snao/,
+      /^why+/
     ]
 
     const replies = [
@@ -23,11 +25,25 @@ export const UNBAN: ChatHandler =
       "Did you cheat on our blessed platform?",
       "Are you lying?",
       "says right here ur a liar",
+      "go fuck yourself and don't even try to evade",
+      "bro no",
+      "YOUR PUNSIHMENT IS VALID",
+      "send your ban ID",
+      "your ban has been extended 5 years",
+      "your ban has been extended 10 years",
+      "your ban has been extended 15 years",
+      "your ban has been extended _permanently_",
     ]
 
-    if (message.channel && stringMatchesAny(str, matches)) {
-      // 50% chance
-      if (Math.random() >= 0.5) {
+    let isSelfResponse = false;
+    const msgMatches = stringMatchesAny(str, matches);
+    if (message.author.id === message.client.user?.id && msgMatches && Math.random() > 0.50) {
+      isSelfResponse = true
+    }
+
+    if (message.channel && (isSelfResponse || msgMatches)) {
+      // 75% chance
+      if (Math.random() >= 0.25) {
         await snailyTypeMessage(message.channel, arrayRandom(replies))
         return true
       }

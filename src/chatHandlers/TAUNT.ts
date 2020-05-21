@@ -18,6 +18,7 @@ export const TAUNT: ChatHandler =
       /(ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
       /(terrible|bad) support/,
       /stfu/,
+      /(eat|suc?k).+(dick|chode|ban)s?/
     ]
 
     const replies = [
