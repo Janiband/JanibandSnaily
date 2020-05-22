@@ -1,4 +1,4 @@
-<img src="https://github.com/youkneekin/JanibandSnaily/blob/master/logologologo.png?raw=true"/>
+![Main Logo](docs/logologologo.png)
 
 # Tagline for JanibandSnaily
 
