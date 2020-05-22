@@ -13,7 +13,7 @@ export const YES: ChatHandler =
     ]
 
     if (message.channel && stringMatchesAny(msg, [/^yes$/])) {
-      await snailyTypeMessage(message.channel, arrayRandom(replies))
+      await snailyTypeMessage(message, arrayRandom(replies))
       return true;
     }
   }

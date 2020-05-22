@@ -17,21 +17,21 @@ export const UNBAN: ChatHandler =
     ]
 
     const replies = [
-      "REKT",
+      "%player GOT REKT",
       "NOT TODAY NOOB",
       "WAIT IT OUT BITCHASS",
-      "YOUR REQUEST HAS BEEN DENIED",
+      "YOUR REQUEST HAS BEEN DENIED %player",
       "PERMBANNED",
-      "No.",
+      "no",
       "No, heathen.",
-      "Did you cheat on our blessed platform?",
+      "Did you cheat on our blessed platform %player?",
       "Are you lying?",
       "says right here ur a liar",
       "go fuck yourself and don't even try to evade",
       "bro no",
       "just... shut up",
       "YOUR PUNSIHMENT IS VALID",
-      "send your ban ID",
+      "send your ban ID %player",
       "your ban has been extended 5 years",
       "your ban has been extended 10 years",
       "your ban has been extended 15 years",
@@ -47,7 +47,7 @@ export const UNBAN: ChatHandler =
     if (message.channel && (isSelfResponse || msgMatches)) {
       // 75% chance
       if (Math.random() >= 0.25) {
-        await snailyTypeMessage(message.channel, arrayRandom(replies))
+        await snailyTypeMessage(message, arrayRandom(replies))
         return true
       }
     }

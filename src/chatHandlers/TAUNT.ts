@@ -11,7 +11,7 @@ export const TAUNT: ChatHandler =
     // ANY
     const taunts = [
       /(bitch)?(kills|slaps)/,
-      /(shoot|fart|laugh)s? at/,
+      /(shoot|fart|laugh)s( at)?/,
       /(screw|fuc?k|no) (u|you)/,
       /i (hate|kill) (u|you)/,
       /(noob|pleb)/,
@@ -23,23 +23,26 @@ export const TAUNT: ChatHandler =
     ]
 
     const replies = [
-      "I don't have to deal with your bullshit",
+      "I don't have to deal with your bullshit %player",
       "I WILL FUCKIN DOUBLE BAN U",
-      "I'm getting tired of this shit. It might be time for the final plan.",
+      "I'm getting tired of your shit, %player",
+      "I could kill you all with ease",
+      "Pray to your god now %player, it will be your last chance",
+      "i stg %player",
       "Call ur mom rn because it's the last time she will hear your voice",
       "I hope you have a will and testament",
-      "_\\*bitchslaps you\\*_",
-      "_\\*shoots you\\*_",
-      "_\\*stabs you\\*_",
+      "_\\*bitchslaps %player\\*_",
+      "_\\*shoots %player\\*_",
+      "_\\*stabs %player\\*_",
       "terrible support",
       "I'd like to see you try to play FiveM now",
-      "Check how long your ban is now",
+      "Check how long your ban is now %player",
       "_\\*unracks AR\\*_",
       "...",
     ]
 
     if (message.channel && message.author.id !== message.client.user?.id && stringMatchesAny(str, taunts)) {
-      await snailyTypeMessage(message.channel, arrayRandom(replies));
+      await snailyTypeMessage(message, arrayRandom(replies));
       return true;
     }
   }

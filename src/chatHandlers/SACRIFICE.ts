@@ -10,15 +10,15 @@ export const SACRIFICE: ChatHandler =
       /throws?.+in(to)?/,
     ]
     const replies = [
-      "SNAILY ACCEPTS YOUR OFFERING",
-      "I REQUIRE ANOTHER SOUL",
+      "SNAILY ACCEPTS YOUR OFFERING, %player",
+      "I REQUIRE ANOTHER SOUL, %player",
       "GOOD, YOU HAVE PLEASED YOUR GOD",
       "A debt has been paid",
       "You are absolved of your sins",
     ]
 
     if (message.channel && stringMatchesAny(msg, matches)) {
-      await snailyTypeMessage(message.channel, arrayRandom(replies))
+      await snailyTypeMessage(message, arrayRandom(replies))
       return true
     }
   }

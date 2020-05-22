@@ -11,7 +11,7 @@ export const WELCOME: ChatHandler =
       /(you|u)/,
     ]
     const replies = [
-      "U R WELCOME",
+      "U R WELCOME %player",
       "Of course child",
       "Just remember you are only alive because of me",
       "The Snail taketh, and the Snail giveth back",
@@ -21,7 +21,7 @@ export const WELCOME: ChatHandler =
     const targeted = isMessageTargetingSnaily(message, false)
 
     if (message.channel && targeted && stringMatchesAll(str, matches)) {
-      await snailyTypeMessage(message.channel, arrayRandom(replies))
+      await snailyTypeMessage(message, arrayRandom(replies))
       return true
     }
   }

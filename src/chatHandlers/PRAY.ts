@@ -3,10 +3,12 @@ import {arrayRandom, stringMatchesAll} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 const prayerResponses = [
-  "SNAILY ACCEPTS YOUR PRAYER, THIS TIME",
-  "YOU ARE HEARD, MY CHILD",
+  "SNAILY ACCEPTS YOUR PRAYER %player, THIS TIME",
+  "YOU ARE HEARD, %player",
   "MAY THE SNAIL BE WITH YOU MY CHILD",
-  "YES",
+  "YES! YES!!!!",
+  "Your prayers give me sustenance, %player",
+  "I require more followers",
 ]
 
 export const PRAY: ChatHandler =
@@ -18,7 +20,7 @@ export const PRAY: ChatHandler =
     if (message.channel && (stringMatchesAll(msg, regularMatchTerms) || stringMatchesAll(msg, prayMatchTerms))) {
       // make sure snaily isn't replying to itself
       if (message.author.id === message.client.user?.id) return;
-      await snailyTypeMessage(message.channel, arrayRandom(prayerResponses))
+      await snailyTypeMessage(message, arrayRandom(prayerResponses))
       return true;
     }
 

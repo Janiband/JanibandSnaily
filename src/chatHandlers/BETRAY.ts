@@ -20,7 +20,7 @@ export const BETRAY: ChatHandler =
     ]
 
     if (message.channel && stringMatchesAll(msg, matches)) {
-      await snailyTypeMessage(message.channel, arrayRandom(betrayMessages));
+      await snailyTypeMessage(message, arrayRandom(betrayMessages));
       return true;
     }
   }

@@ -19,7 +19,7 @@ export const RETORT: ChatHandler =
     ]
 
     if (message.channel && message.author.id !== message.client.user?.id && stringMatchesAny(msg, triggers)) {
-      await snailyTypeMessage(message.channel, arrayRandom(retorts));
+      await snailyTypeMessage(message, arrayRandom(retorts));
       return true;
     }
   }

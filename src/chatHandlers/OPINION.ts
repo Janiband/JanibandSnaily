@@ -18,7 +18,7 @@ export const OPINION: ChatHandler =
     ]
 
     if (message.channel && isTargeted && stringMatchesAny(msg, matches)) {
-      await snailyTypeMessage(message.channel, arrayRandom(replies))
+      await snailyTypeMessage(message, arrayRandom(replies))
       return true;
     }
   }

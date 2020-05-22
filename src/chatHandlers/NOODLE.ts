@@ -11,13 +11,13 @@ export const NOODLE: ChatHandler =
     ]
 
     const messages = [
-      "_\\*grabs a bowl\\*_",
+      "_\\*grabs a bowl from %player\\*_",
       "_\\*waits for a bowl\\*_",
       "_\\*expects better service\\*_"
     ]
 
     if (message.channel && stringMatchesAll(msg, matches)) {
-      await snailyTypeMessage(message.channel, arrayRandom(messages))
+      await snailyTypeMessage(message, arrayRandom(messages))
       return true
     }
   }

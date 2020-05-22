@@ -12,6 +12,7 @@ export const MUSIC: ChatHandler =
 
     const musicMessages = [
       "_\\*dances along\\*_",
+      "_\\*likes %player's song\\*_",
       "_\\*hums a tune\\*_",
       "_\\*sways\\*_",
       "_\\*sings a song\\*_",
@@ -20,7 +21,7 @@ export const MUSIC: ChatHandler =
     if (message.channel && stringMatchesAny(str, matches)) {
       // 50% chance
       if (Math.random() >= 0.50) {
-        await snailyTypeMessage(message.channel, arrayRandom(musicMessages))
+        await snailyTypeMessage(message, arrayRandom(musicMessages))
         return true;
       }
     }
