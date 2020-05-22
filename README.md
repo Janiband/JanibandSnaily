@@ -1,4 +1,4 @@
-![Main Logo](docs/logologologo.png)
+![Main Logo](docs/logo.png)
 
 # Tagline for JanibandSnaily
 
