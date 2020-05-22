@@ -6,7 +6,7 @@ export const MUSIC: ChatHandler =
   async (message) => {
     const str = message.content.toLowerCase();
     const matches = [
-      /play(s|ing)\s?(a|the)?/,
+      /(sing|play)(s|ing)\s?(a|the)?/,
       /doots?/,
     ];
 

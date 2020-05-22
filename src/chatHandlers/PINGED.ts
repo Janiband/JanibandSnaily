@@ -10,7 +10,11 @@ export const PINGED: ChatHandler =
       "Did you just ping a fucking bot? What are you, retarded?",
       "Do you **WANT** to be banned?",
       "pinging mods? srsly",
-      "Do you have a deathwish?"
+      "Do you have a deathwish?",
+      "Don't ping me bitch",
+      "k",
+      "why u ping",
+      "I swear to god (me)",
     ]
 
     if (message.channel && isTargeted) {

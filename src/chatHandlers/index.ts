@@ -10,14 +10,19 @@ import {SACRIFICE} from "./SACRIFICE";
 import {RETORT} from "./RETORT";
 import {PINGED} from "./PINGED";
 import {WELCOME} from "./WELCOME";
+import {YES} from "./YES";
+import {SPELLING} from "./SPELLING";
+import {OPINION} from "./OPINION";
+import {CENSORED} from "./CENSORED";
 
 export const ChatHandlers: ChatHandlerMap = [
+  CENSORED,
   PRAY, BETRAY, SACRIFICE,
   MUSIC, NOODLE,
   UNBAN, CHEAT,
-  TAUNT, RETORT,
+  TAUNT, RETORT, OPINION,
   WELCOME,
 
   // handle pings if not handled already
-  PINGED,
+  PINGED, YES, SPELLING,
 ]

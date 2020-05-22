@@ -16,20 +16,26 @@ export const TAUNT: ChatHandler =
       /i (hate|kill) (u|you)/,
       /(noob|pleb)/,
       /(you|u) (cant|can't|cannot)/,
-      /(ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
-      /(terrible|bad) support/,
-      /stfu/,
+      /(pussy|piece of sh[ei]t|cunt|hoe|whore|no balls|bitch|ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
+      /^(terrible|bad) support/,
+      /^(k|stfu)$/,
       /(eat|suc?k).+(dick|chode|ban)s?/
     ]
 
     const replies = [
-      "FUCK U",
-      "I WILL FUCKIN BAN U",
-      "YOU DARE QUESTION YOUR GOD?",
+      "I don't have to deal with your bullshit",
+      "I WILL FUCKIN DOUBLE BAN U",
+      "I'm getting tired of this shit. It might be time for the final plan.",
       "Call ur mom rn because it's the last time she will hear your voice",
-      "I hope you have a will",
-      "STFU",
-      "_\\*bitchslaps u\\*_"
+      "I hope you have a will and testament",
+      "_\\*bitchslaps you\\*_",
+      "_\\*shoots you\\*_",
+      "_\\*stabs you\\*_",
+      "terrible support",
+      "I'd like to see you try to play FiveM now",
+      "Check how long your ban is now",
+      "_\\*unracks AR\\*_",
+      "...",
     ]
 
     if (message.channel && message.author.id !== message.client.user?.id && stringMatchesAny(str, taunts)) {

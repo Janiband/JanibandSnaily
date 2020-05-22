@@ -29,6 +29,7 @@ export const UNBAN: ChatHandler =
       "says right here ur a liar",
       "go fuck yourself and don't even try to evade",
       "bro no",
+      "just... shut up",
       "YOUR PUNSIHMENT IS VALID",
       "send your ban ID",
       "your ban has been extended 5 years",
