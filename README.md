@@ -1,4 +1,4 @@
-<img src="https://github.com/youkneekin/JanibandSnaily/blob/master/0301f645963889531fb4870e8d47f2f7da7f1c45.png?raw=true" alt="Main Logo" style="zoom: 25%;" align="center"/>
+<img src="https://github.com/youkneekin/JanibandSnaily/blob/master/logologologo.png?raw=true"/>
 
 # Tagline for JanibandSnaily
 
