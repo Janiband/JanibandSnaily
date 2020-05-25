@@ -19,9 +19,11 @@ This group is only meant to be comical and we mean no offense or harm to anyone 
 
 # Disclaimer
 
-Janiband as a group, JanibandSnaily are not professionally associated with CitizenFX, these are just for fun!
+Janiband as a group, JanibandSnaily are not professionally associated with CitizenFX(1), these are just for fun!
 Snaily is a snail emote, from EmojiOne and EmojiTwo, released under CC-BY, adapted for use for FiveM by CitizenFX, 
 further adapted for use for this bot.
+
+(1)Janiband has no official correlation with bans given out by CitizenFX/FiveM. Do not come to us if you are banned. 
 
 # Credit
 
