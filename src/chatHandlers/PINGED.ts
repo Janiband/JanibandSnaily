@@ -15,6 +15,7 @@ export const PINGED: ChatHandler =
       "k",
       "why u ping",
       "I swear to god (me)",
+      "Oh my god, FUCK OFF and don't ping me again."
     ]
 
     if (message.channel && isTargeted) {
