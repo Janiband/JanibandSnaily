@@ -16,6 +16,7 @@ export const RETORT: ChatHandler =
       "Yes.",
       "I HAVE SPOKEN",
       "did i stutter bitch"
+      "do i need to repeat myself, bitch?"
     ]
 
     if (message.channel && message.author.id !== message.client.user?.id && stringMatchesAny(msg, triggers)) {
