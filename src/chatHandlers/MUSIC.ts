@@ -15,6 +15,7 @@ export const MUSIC: ChatHandler =
       "_\\*hums a tune\\*_",
       "_\\*sways\\*_",
       "_\\*sings a song\\*_",
+      "_\\*taps nonexistent foot\\*_"
     ]
 
     if (message.channel && stringMatchesAny(str, matches)) {
