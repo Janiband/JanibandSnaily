@@ -12,6 +12,7 @@ export const CENSORED: ChatHandler =
       "that's offensive",
       "im calling the police",
       "did you learn those words from your mother?",
+      "i can see past that spoiler, and honestly, you're a vile being."
     ]
 
     if (message.channel && msg.match(/\|\|.+\|\|/)) {
