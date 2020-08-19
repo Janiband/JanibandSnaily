@@ -14,7 +14,8 @@ export const OPINION: ChatHandler =
       "it would take too long to explain my opinion",
       "my opinion is that you're a dumbass",
       "I don't care enough",
-      "it's a very important issue"
+      "it's a very important issue",
+      "you are an idiot, and thats my final opinion"
     ]
 
     if (message.channel && isTargeted && stringMatchesAny(msg, matches)) {
