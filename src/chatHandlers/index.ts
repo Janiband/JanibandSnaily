@@ -14,9 +14,10 @@ import {YES} from "./YES";
 import {SPELLING} from "./SPELLING";
 import {OPINION} from "./OPINION";
 import {CENSORED} from "./CENSORED";
+import {CODE} from "./CODE";
 
 export const ChatHandlers: ChatHandlerMap = [
-  CENSORED,
+  CENSORED, CODE,
   PRAY, BETRAY, SACRIFICE,
   MUSIC, NOODLE,
   UNBAN, CHEAT,

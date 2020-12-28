@@ -1,5 +1,5 @@
 import {ChatHandler} from "../types";
-import {arrayRandom, stringMatchesAll} from "../lib/parsing";
+import {arrayRandom, stringMatchesAll, stringStrip} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 const prayerResponses = [
@@ -13,7 +13,7 @@ const prayerResponses = [
 
 export const PRAY: ChatHandler =
   async (message) => {
-    const msg = message.content.toLowerCase()
+    const msg = stringStrip(message.content)
     const regularMatchTerms = [/prays?/, /snaily/]
     const prayMatchTerms = [/(🙏|:pray:)/, /:\w+snaily?\w+:/]
 

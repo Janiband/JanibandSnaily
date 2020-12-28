@@ -1,10 +1,10 @@
 import {ChatHandler} from "../types";
-import {arrayRandom, stringMatchesAll} from "../lib/parsing";
+import {arrayRandom, stringMatchesAll, stringStrip} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 export const NOODLE: ChatHandler =
   async (message) => {
-    const msg = message.content.toLowerCase()
+    const msg = stringStrip(message.content)
     const matches = [
       /(makes|cooks)/,
       /(noodles|ramen)/,

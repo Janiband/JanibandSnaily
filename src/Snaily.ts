@@ -8,7 +8,7 @@ export class Snaily {
   constructor(config: SnailyConfig) {
     this.client = new Client({
       presence: {
-        activity: {name: "over Cfx.re #bans", type: "WATCHING"},
+        activity: {name: "over Cfx.re", type: "WATCHING"},
         status: "online",
       }
     });

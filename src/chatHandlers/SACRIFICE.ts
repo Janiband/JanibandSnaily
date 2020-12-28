@@ -1,10 +1,10 @@
 import {ChatHandler} from "../types";
-import {arrayRandom, stringMatchesAny} from "../lib/parsing";
+import {arrayRandom, stringMatchesAny, stringStrip} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 export const SACRIFICE: ChatHandler =
   async (message) => {
-    const msg = message.content.toLowerCase()
+    const msg = stringStrip(message.content)
     const matches = [
       /(sacrifice[sd]?)/,
       /throws?.+in(to)?/,

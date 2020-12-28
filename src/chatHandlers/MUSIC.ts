@@ -1,14 +1,13 @@
 import {ChatHandler} from "../types";
-import {arrayRandom, stringMatchesAny} from "../lib/parsing";
+import {arrayRandom, stringMatchesAny, stringStrip} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 export const MUSIC: ChatHandler =
   async (message) => {
-    const str = message.content.toLowerCase();
-    const matches = [
-      /(sing|play)(s|ing)\s?(a|the)?/,
-      /doots?/,
-    ];
+      const msg = stringStrip(message.content)
+      const matches = [
+          /(sing|play)(s|ing)\s?(a|the)?/,
+      ];
 
     const musicMessages = [
       "_\\*dances along\\*_",
@@ -18,11 +17,11 @@ export const MUSIC: ChatHandler =
       "_\\*sings a song\\*_",
     ]
 
-    if (message.channel && stringMatchesAny(str, matches)) {
-      // 50% chance
-      if (Math.random() >= 0.50) {
-        await snailyTypeMessage(message, arrayRandom(musicMessages))
-        return true;
+      if (message.channel && stringMatchesAny(msg, matches)) {
+          // 50% chance
+          if (Math.random() >= 0.50) {
+              await snailyTypeMessage(message, arrayRandom(musicMessages))
+              return true;
+          }
       }
-    }
   }

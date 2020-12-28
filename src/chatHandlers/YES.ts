@@ -1,10 +1,10 @@
 import {ChatHandler} from "../types";
-import {arrayRandom, stringMatchesAny} from "../lib/parsing";
+import {arrayRandom, stringMatchesAny, stringStrip} from "../lib/parsing";
 import {snailyTypeMessage} from "../lib/anxiety";
 
 export const YES: ChatHandler =
   async (message) => {
-    const msg = message.content.toLowerCase()
+    const msg = stringStrip(message.content)
     const replies = [
       "it is done",
       "fine then bitch",

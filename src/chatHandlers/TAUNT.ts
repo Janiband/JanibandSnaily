@@ -10,16 +10,17 @@ export const TAUNT: ChatHandler =
 
     // ANY
     const taunts = [
-      /(bitch)?(kills|slaps)/,
-      /(shoot|fart|laugh)s( at)?/,
-      /(screw|fuc?k|no) (u|you)/,
-      /i (hate|kill) (u|you)/,
-      /(noob|pleb)/,
-      /(you|u) (cant|can't|cannot)/,
-      /(pussy|piece of sh[ei]t|cunt|hoe|whore|no balls|bitch|ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
-      /^(terrible|bad) support/,
-      /^(k|stfu)$/,
-      /(eat|suc?k).+(dick|chode|ban)s?/
+        /(bitch)?(kills|slaps)/,
+        /(shoots|stabs|murders|farts|laughs).+(at|back|snaily?)/,
+        /(screw|fuc?k|no) (u|you)/,
+        /i (hate|kill) (u|you)/,
+        /(noob|pleb)/,
+        /(you|u) (cant|can't|cannot)/,
+        /(pussy|piece of sh[ei]t|cunt|hoe|whore|no balls|bitch|ugly|rude|st[ia]nky|stupid|dumb?|lame)/,
+        /^(terrible|bad) support/,
+        /^(k|stfu)$/,
+        /^bot$/,
+        /(eat|suc?k).+(dick|chode|ban)s?/
     ]
 
     const replies = [
